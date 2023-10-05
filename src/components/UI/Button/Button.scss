@@ -25,4 +25,9 @@
       @apply hover:bg-blue-100 active:bg-blue-100;
     }
   }
+
+  &--icon {
+    @apply inline-flex items-center;
+    @apply px-1.5;
+  }
 }

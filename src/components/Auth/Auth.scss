@@ -38,7 +38,7 @@
         @apply mx-auto;
 
         @include filterTransition(200) {
-          @apply dark:brightness-2000;
+          @apply dark:lg:brightness-2000;
         }
       }
     }

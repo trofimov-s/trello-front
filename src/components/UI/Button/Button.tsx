@@ -5,7 +5,7 @@ import './Button.scss';
 
 type Props = {
   type?: 'submit' | 'button';
-  role?: 'primary' | 'secondary';
+  role?: 'primary' | 'secondary' | 'icon';
   onClick: () => void;
   disabled?: boolean;
 };
