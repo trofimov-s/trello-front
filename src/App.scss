@@ -1,0 +1,5 @@
+@import 'styles/vars';
+
+.main {
+  height: calc(100vh - $header-height);
+}

@@ -1,0 +1,23 @@
+@import 'styles/vars';
+@import 'styles/mixins';
+
+.header {
+  @apply sticky top-0 z-10;
+  @apply flex items-center justify-between;
+  @apply border-b border-solid border-gray-400;
+  @include schemaBGSwitcher;
+
+  height: $header-height;
+
+  &__logo {
+    &-img {
+      @include filterTransition(200) {
+        @apply dark:brightness-2000;
+      }
+    }
+  }
+
+  &__actions {
+    @apply flex;
+  }
+}

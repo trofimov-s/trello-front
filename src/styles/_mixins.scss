@@ -1,0 +1,20 @@
+@mixin schemaBGSwitcher() {
+  @apply bg-white dark:bg-slate-900 dark:text-white;
+
+  @apply transition-colors duration-200 ease-linear;
+}
+
+@mixin filterTransition($duration) {
+  @content;
+
+  -webkit-transition: #{duration}ms -webkit-filter linear;
+  transition:
+    #{$duration}ms filter linear,
+    #{$duration}ms -webkit-filter linear;
+}
+
+@mixin mediaHover() {
+  @media (hover: hover) {
+    @content;
+  }
+}

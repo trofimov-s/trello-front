@@ -1,0 +1,51 @@
+@import 'styles/mixins';
+
+.auth-wrapper {
+  @apply h-full;
+  @apply flex lg:flex-col justify-evenly items-center;
+
+  .form-block {
+    @apply flex flex-col items-center;
+    @apply w-full max-w-sm;
+
+    &__title {
+      @apply text-3xl font-bold;
+      @apply mb-7.5;
+    }
+
+    .auth-form {
+      @apply flex flex-col gap-y-4;
+      @apply w-full;
+      @apply mb-8;
+    }
+
+    &__actions {
+      @apply w-full;
+      @apply flex flex-col gap-y-3;
+    }
+  }
+
+  .img-block {
+    @apply flex flex-col items-center;
+    @apply max-w-xl;
+
+    &__wrapper {
+      @apply w-full;
+      @apply mb-0 lg:mb-8;
+
+      img {
+        @apply w-full lg:w-1/2;
+        @apply mx-auto;
+
+        @include filterTransition(200) {
+          @apply dark:brightness-2000;
+        }
+      }
+    }
+
+    &__title {
+      @apply w-4/5;
+      @apply sm:text-base text-2xl text-center;
+    }
+  }
+}

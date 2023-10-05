@@ -1,0 +1,31 @@
+.form-field {
+  @apply flex flex-col;
+  @apply relative;
+
+  &__label {
+    @apply font-light;
+    @apply px-4;
+  }
+
+  &__input {
+    @apply px-4 py-2;
+    @apply font-light;
+    @apply bg-gray-300 dark:bg-transparent rounded-3xl;
+    @apply outline-none;
+    @apply border border-solid border-gray-300 dark:border-white;
+
+    &-error {
+      @apply text-xs mt-0.5 font-light text-red-600;
+      @apply px-4;
+      @apply absolute bottom-0 transform translate-y-full;
+    }
+
+    &--invalid:not(&:focus) {
+      @apply border border-solid border-red-600;
+    }
+
+    &:focus ~ &-error {
+      display: none;
+    }
+  }
+}

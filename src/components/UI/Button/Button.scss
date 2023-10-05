@@ -1,0 +1,28 @@
+@import 'styles/mixins';
+
+.btn {
+  @apply w-full;
+  @apply h-11;
+  @apply rounded-3xl;
+  @apply disabled:opacity-50 disabled:pointer-events-none;
+
+  @apply transition-colors duration-150 ease-linear;
+
+  &--primary {
+    @apply bg-blue-500;
+    @apply text-white;
+
+    @include mediaHover {
+      @apply hover:bg-blue-600 active:bg-blue-600;
+    }
+  }
+
+  &--secondary {
+    @apply border-blue-500 border-solid border-2;
+    @apply text-blue-500;
+
+    @include mediaHover {
+      @apply hover:bg-blue-100 active:bg-blue-100;
+    }
+  }
+}

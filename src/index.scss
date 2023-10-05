@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'styles/mixins';
+
+html {
+  @apply font-main;
+  @apply h-full;
+}
+
+body {
+  @apply h-full;
+  @include schemaBGSwitcher;
+}
+
+#root {
+  @apply h-full;
+}
+
+.container {
+  @apply w-full;
+  @apply px-7.5 md:px-4;
+}
