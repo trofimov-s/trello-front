@@ -12,9 +12,7 @@ const VALIDATION_MAP: { [key in VALIDATION_MAP_KEYS]: (v?: string | number) => Y
   required: () => Yup.string().trim().required(),
 };
 
-export function buildValidator(
-  fields: FormField[],
-): Yup.ObjectSchema<{ [key: string]: string }> {
+export function buildValidator(fields: FormField[]): Yup.ObjectSchema<{ [key: string]: string }> {
   const schema = fields.reduce(
     (prev, { validation }) => ({
       ...prev,

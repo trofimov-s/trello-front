@@ -10,7 +10,12 @@ type Props = {
   disabled?: boolean;
 };
 
-const Button: FC<PropsWithChildren<Props>> = ({ children, role = 'primary', type = 'button', ...props }) => {
+const Button: FC<PropsWithChildren<Props>> = ({
+  children,
+  role = 'primary',
+  type = 'button',
+  ...props
+}) => {
   return (
     <button className={cn(['btn', `btn--${role}`])} type={type} {...props}>
       {children}
