@@ -3,7 +3,6 @@ import { FC } from 'react';
 import './Header.scss';
 import useColorSchema from '@hooks/use-color-schema';
 import { Button, Icon } from '@components/UI';
-import { ROUTES } from '@enums/routes.enum';
 import { Link } from 'react-router-dom';
 
 const Header: FC = () => {
@@ -14,7 +13,7 @@ const Header: FC = () => {
 
   return (
     <header className="header container">
-      <Link to={ROUTES.INDEX} className="header__logo">
+      <Link to={'/'} className="header__logo">
         <img className="header__logo-img" src="src/assets/icons/logo.svg" alt="logo" />
       </Link>
       <div className="header__actions">
