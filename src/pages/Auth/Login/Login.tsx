@@ -9,8 +9,6 @@ import { useAppDispatch, useAppSelector } from '@store/index';
 import AUTH_ACTIONS from '@store/auth/auth.actions';
 import { LoginFormI } from '@models/form/auth-form';
 import { AUTH_SELECTORS } from '@store/auth/auth-selectors';
-import { addToast } from '@store/toast/toast-slice';
-import { ToastTypeI } from '@models/entities/toast.interface';
 
 const LoginPage: FC = () => {
   const navigate = useNavigate();
@@ -23,10 +21,6 @@ const LoginPage: FC = () => {
     dispatch(AUTH_ACTIONS.loginAsync(values as LoginFormI));
   };
 
-  const addToastFn = (type: ToastTypeI) => {
-    dispatch(addToast({ message: 'Some message for toast', type }));
-  };
-
   return (
     <>
       <Auth
@@ -36,11 +30,6 @@ const LoginPage: FC = () => {
         ctaText="Sign In"
         isCtaDisabled={isLoading}
       >
-        <div className="flex">
-          <button onClick={() => addToastFn('success')}>Add toast suc</button>
-          <button onClick={() => addToastFn('error')}>Add toast warn</button>
-          <button onClick={() => addToastFn('info')}>Add toast info</button>
-        </div>
         <Button disabled={isLoading} onClick={() => navigateHanlder(ROUTES.RESET)} role="secondary">
           Forgot Password?
         </Button>

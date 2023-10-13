@@ -5,7 +5,7 @@ import { Button } from '@components/UI';
 import { ROUTES } from '@enums/routes.enum';
 import Auth from '@components/Auth/Auth';
 import { FormFieldI } from '@models/form/form-field.type';
-import { FORM_FIELDS } from '@pages/Login/form-fields.constant';
+import { FORM_FIELDS } from '@pages/Auth/Login/form-fields.constant';
 import { VALIDATION_MAP_KEYS } from '@enums/forms/validation-map-keys.enum';
 import { useAppDispatch, useAppSelector } from '@store/index';
 import { AUTH_SELECTORS } from '@store/auth/auth-selectors';

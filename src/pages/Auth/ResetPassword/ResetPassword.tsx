@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
 import Auth from '@components/Auth/Auth';
-import { FORM_FIELDS } from '@pages/Login/form-fields.constant';
+import { FORM_FIELDS } from '@pages/Auth/Login/form-fields.constant';
 import { AUTH_SELECTORS } from '@store/auth/auth-selectors';
 import { useAppDispatch, useAppSelector } from '@store/index';
 import AUTH_ACTIONS from '@store/auth/auth.actions';

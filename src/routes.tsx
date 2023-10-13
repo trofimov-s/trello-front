@@ -1,12 +1,12 @@
 import { createBrowserRouter } from 'react-router-dom';
 import App from './App';
 import HomePage from '@pages/Home/Home';
-import LoginPage from '@pages/Login/Login';
-import SignupPage from '@pages/Signup/Signup';
+import LoginPage from '@pages/Auth/Login/Login';
+import SignupPage from '@pages/Auth/Signup/Signup';
 import { ROUTES } from '@enums/routes.enum';
 import AuthGuard from '@components/AuthGuard/AuthGuard';
-import ResetPassword from '@pages/ResetPassword/ResetPassword';
-import NewPassword from '@pages/NewPassword/NewPassword';
+import ResetPassword from '@pages/Auth/ResetPassword/ResetPassword';
+import NewPassword from '@pages/Auth/NewPassword/NewPassword';
 
 type Router = ReturnType<typeof createBrowserRouter>;
 
