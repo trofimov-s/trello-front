@@ -5,6 +5,8 @@ import LoginPage from '@pages/Login/Login';
 import SignupPage from '@pages/Signup/Signup';
 import { ROUTES } from '@enums/routes.enum';
 import AuthGuard from '@components/AuthGuard/AuthGuard';
+import ResetPassword from '@pages/ResetPassword/ResetPassword';
+import NewPassword from '@pages/NewPassword/NewPassword';
 
 type Router = ReturnType<typeof createBrowserRouter>;
 
@@ -36,6 +38,14 @@ const router: Router = createBrowserRouter([
             <SignupPage />
           </AuthGuard>
         ),
+      },
+      {
+        path: ROUTES.RESET,
+        element: <ResetPassword />,
+      },
+      {
+        path: `${ROUTES.NEW_PASSWORD}/:resetToken/:uid`,
+        element: <NewPassword />,
       },
     ],
   },

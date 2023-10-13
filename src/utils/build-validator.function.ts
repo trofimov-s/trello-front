@@ -1,8 +1,8 @@
 import { VALIDATION_MAP_KEYS } from '@enums/forms/validation-map-keys.enum';
-import { FormField } from '@models/form/form-field.type';
+import { FormFieldI } from '@models/form/form-field.type';
 import * as Yup from 'yup';
 
-const VALIDATION_MAP: { [key in VALIDATION_MAP_KEYS]: (v?: string | number) => Yup.AnySchema } = {
+const VALIDATION_MAP: { [key in VALIDATION_MAP_KEYS]: (...args: (string | number)[]) => Yup.AnySchema } = {
   email: () => Yup.string().email('Invalid email').required('Required field'),
   min_length: (v) =>
     Yup.string()
@@ -10,9 +10,10 @@ const VALIDATION_MAP: { [key in VALIDATION_MAP_KEYS]: (v?: string | number) => Y
       .trim()
       .min(v as number, `Field should be at least ${v} characters`),
   required: () => Yup.string().trim().required(),
+  equals: (ref, mess) => Yup.string().required('Required field').oneOf([Yup.ref(ref as string), null], mess as string),
 };
 
-export function buildValidator(fields: FormField[]): Yup.ObjectSchema<{ [key: string]: string }> {
+export function buildValidator(fields: FormFieldI[]): Yup.ObjectSchema<{ [key: string]: string }> {
   const schema = fields.reduce(
     (prev, { validation }) => ({
       ...prev,

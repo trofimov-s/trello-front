@@ -6,7 +6,7 @@ export type ValidationField = {
   args?: (string | number)[];
 };
 
-export type FormField = {
+export type FormFieldI = {
   name: string;
   value?: string;
   label: string;

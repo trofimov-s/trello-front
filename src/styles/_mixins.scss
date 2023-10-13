@@ -1,6 +1,5 @@
-@mixin schemaBGSwitcher() {
-  @apply bg-white dark:bg-slate-900 dark:text-white;
-
+@mixin colorsTransition() {
+  @content;
   @apply transition-colors duration-200 ease-linear;
 }
 

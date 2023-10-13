@@ -1,5 +1,11 @@
+@import 'styles/mixins';
+
 .material-symbols-outlined {
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
+
+  @apply text-gray-500 dark:text-white;
+
+  @include colorsTransition;
 }

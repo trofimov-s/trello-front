@@ -1,4 +1,6 @@
 import { ROUTES } from '@enums/routes.enum';
+import { AUTH_SELECTORS } from '@store/auth/auth-selectors';
+import { useAppSelector } from '@store/index';
 import { FC, PropsWithChildren, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -7,7 +9,7 @@ type Props = {
 };
 
 const AuthGuard: FC<PropsWithChildren<Props>> = ({ children, inverse = false }) => {
-  const isAuth = false;
+  const { isAuth } = useAppSelector(AUTH_SELECTORS.selectAuthState);
   const navigate = useNavigate();
 
   useEffect(() => {

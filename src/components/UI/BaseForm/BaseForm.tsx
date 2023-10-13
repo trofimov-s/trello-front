@@ -1,25 +1,29 @@
 import { Form, Formik } from 'formik';
 import { FC, Ref } from 'react';
 
-import { FormField } from '@models/form/form-field.type';
+import { FormFieldI } from '@models/form/form-field.type';
 import { ObjV } from '@models/obj-v.interface';
 import { Input } from '@components/UI';
 import * as Yup from 'yup';
 
 type Prop = {
-  fields: FormField[];
+  fields: FormFieldI[];
   submitHanlder: (values: ObjV<string>) => void;
   innerRef: Ref<any>;
   className?: string;
   validationSchema: Yup.ObjectSchema<ObjV<string>>;
+  validateOnChange?: boolean;
+  validateOnBlur?: boolean;
 };
 
 const BaseForm: FC<Prop> = ({
   fields,
+  className = '',
   submitHanlder,
   innerRef,
-  className = '',
   validationSchema,
+  validateOnBlur = true,
+  validateOnChange = true,
 }) => {
   const initialValues: { [key: string]: string } = fields.reduce(
     (prev, field) => ({
@@ -35,6 +39,8 @@ const BaseForm: FC<Prop> = ({
       initialValues={initialValues}
       onSubmit={submitHanlder}
       validationSchema={validationSchema}
+      validateOnChange={validateOnChange}
+      validateOnBlur={validateOnBlur}
     >
       <Form className={className}>
         {fields.map((field) => (

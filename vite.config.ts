@@ -17,6 +17,8 @@ export default defineConfig({
       "@utils": path.resolve(ROOT_PATH, 'utils'),
       "@hooks": path.resolve(ROOT_PATH, 'hooks'),
       "styles": path.resolve(ROOT_PATH, 'styles'),
+      "@store": path.resolve(ROOT_PATH, 'store'),
+      "@constants": path.resolve(ROOT_PATH, 'constants'),
     },
   },
 });

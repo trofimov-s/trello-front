@@ -5,7 +5,7 @@
   @apply sticky top-0 z-10;
   @apply flex items-center justify-between;
   @apply border-b border-solid border-gray-400;
-  @include schemaBGSwitcher;
+  @include colorsTransition;
 
   height: $header-height;
 

@@ -11,7 +11,7 @@ html {
 
 body {
   @apply h-full;
-  @include schemaBGSwitcher;
+  @apply bg-white dark:bg-slate-900 dark:text-white;
 }
 
 #root {

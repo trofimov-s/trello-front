@@ -1,7 +1,7 @@
 import { VALIDATION_MAP_KEYS } from '@enums/forms/validation-map-keys.enum';
-import { FormField } from '@models/form/form-field.type';
+import { FormFieldI } from '@models/form/form-field.type';
 
-export const FORM_FIELDS: FormField[] = [
+export const FORM_FIELDS: FormFieldI[] = [
   {
     name: 'email',
     type: 'email',
