@@ -1,7 +1,6 @@
 @import 'styles/mixins';
 
 .auth-wrapper {
-  @apply h-full;
   @apply flex lg:flex-col justify-evenly items-center;
 
   .form-block {

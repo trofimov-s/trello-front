@@ -6,6 +6,7 @@ import { useAppDispatch } from './store';
 import AUTH_ACTIONS from '@store/auth/auth.actions';
 import LocalStorageHelper from '@utils/local-storage-helper';
 import { LocalStorageKeys } from '@enums/local-storage-keys.enum';
+import ToastHost from '@components/Overlays/ToastHost/ToastHost';
 
 export const App: FC = () => {
   const dispatch = useAppDispatch();
@@ -22,6 +23,7 @@ export const App: FC = () => {
       <main className="main container">
         <Outlet />
       </main>
+      <ToastHost />
     </>
   );
 };

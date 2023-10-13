@@ -1,0 +1,7 @@
+#overlay {
+  @apply absolute top-3 right-3 z-50 w-100 md:w-auto md:left-3;
+}
+
+.toast-list {
+  @apply flex flex-col gap-y-3;
+}

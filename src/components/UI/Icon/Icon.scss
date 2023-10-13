@@ -5,7 +5,7 @@
   -ms-user-select: none;
   user-select: none;
 
-  @apply text-gray-500 dark:text-white;
-
-  @include colorsTransition;
+  @include colorsTransition {
+    @apply text-gray-500 dark:text-white;
+  }
 }

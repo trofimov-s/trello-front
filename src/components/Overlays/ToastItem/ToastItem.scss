@@ -1,0 +1,63 @@
+$delay: 500ms;
+
+.toast-item {
+  @apply rounded-lg;
+  @apply overflow-hidden;
+  @apply bg-slate-100 dark:bg-slate-600;
+  @apply shadow-md dark:shadow-slate-500;
+  animation: appearence $delay linear forwards;
+
+  &--info {
+    .toast-item__icon {
+      @apply text-blue-500;
+    }
+
+    .toast-item__progress-bar {
+      @apply bg-blue-500;
+    }
+  }
+
+  &--success {
+    .toast-item__icon {
+      @apply text-green-300;
+    }
+
+    .toast-item__progress-bar {
+      @apply bg-green-300;
+    }
+  }
+
+  &--error {
+    .toast-item__icon {
+      @apply text-red-300;
+    }
+
+    .toast-item__progress-bar {
+      @apply bg-red-300;
+    }
+  }
+
+  &__content {
+    @apply flex items-center gap-x-3;
+    @apply px-4 py-3;
+  }
+
+  &__message {
+    @apply font-light;
+  }
+
+  &__progress-bar {
+    @apply w-full h-1.5;
+    @apply transition-all ease-linear duration-5000;
+  }
+}
+
+@keyframes appearence {
+  0% {
+    transform: translateX(150%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}

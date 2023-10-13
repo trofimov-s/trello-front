@@ -17,17 +17,27 @@ export default {
           700: '#0000004d',
         },
         blue: {
-          100: "#e3ecff",
+          100: '#e3ecff',
           500: '#407bff',
           600: '#2668f6',
+        },
+        green: {
+          300: '#6aff2f',
+        },
+        red: {
+          300: '#ff3c3c',
         },
       },
       spacing: {
         7.5: '1.875rem', // 30px
+        100: '25rem' // 400px
       },
       brightness: {
         2000: '20',
       },
+      transitionDuration: {
+        5000: '5000ms',
+      }
     },
     screens: {
       xl: { max: '1279px' }, // => @media (max-width: 1279px)

@@ -1,7 +1,6 @@
 import { FC } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import './Signup.scss';
 import { Button } from '@components/UI';
 import { ROUTES } from '@enums/routes.enum';
 import Auth from '@components/Auth/Auth';

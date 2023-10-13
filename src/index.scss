@@ -6,16 +6,19 @@
 
 html {
   @apply font-main;
-  @apply h-full;
 }
 
 body {
-  @apply h-full;
-  @apply bg-white dark:bg-slate-900 dark:text-white;
+  @apply relative;
+
+  @include colorsTransition {
+    @apply bg-white dark:bg-slate-900 dark:text-white;
+  }
 }
 
 #root {
-  @apply h-full;
+  @apply min-h-screen;
+  @apply flex flex-col;
 }
 
 .container {

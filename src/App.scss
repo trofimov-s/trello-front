@@ -1,5 +1,7 @@
 @import 'styles/vars';
 
 .main {
-  height: calc(100vh - $header-height);
+  height: calc(100% - $header-height);
+  @apply py-7.5 md:py-4;
+  @apply flex justify-center flex-1;
 }

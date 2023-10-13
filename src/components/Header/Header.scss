@@ -5,7 +5,9 @@
   @apply sticky top-0 z-10;
   @apply flex items-center justify-between;
   @apply border-b border-solid border-gray-400;
-  @include colorsTransition;
+  @include colorsTransition {
+    @apply bg-white dark:bg-slate-900;
+  }
 
   height: $header-height;
 
