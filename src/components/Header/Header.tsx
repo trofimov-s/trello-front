@@ -26,7 +26,7 @@ const Header: FC = () => {
 
         {isAuth && (
           <Button role="icon" onClick={changeModeHandler}>
-            <Icon extendedClass='text-4xl'>account_circle</Icon>
+            <Icon extendedClass="text-4xl">account_circle</Icon>
           </Button>
         )}
       </div>

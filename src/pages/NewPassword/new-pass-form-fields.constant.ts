@@ -9,7 +9,7 @@ export const NEW_PASS_FORM_FIELDS: FormFieldI[] = [
     validation: {
       field: 'password',
       validatorKey: VALIDATION_MAP_KEYS.EQUALS,
-      args: ['confirmPassword', "Fields must be equivalent."],
+      args: ['confirmPassword', 'Fields must be equivalent.'],
     },
   },
   {
@@ -19,7 +19,7 @@ export const NEW_PASS_FORM_FIELDS: FormFieldI[] = [
     validation: {
       field: 'confirmPassword',
       validatorKey: VALIDATION_MAP_KEYS.EQUALS,
-      args: ['password', "Fields must be equivalent."],
+      args: ['password', 'Fields must be equivalent.'],
     },
   },
-]
+];

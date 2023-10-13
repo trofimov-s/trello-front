@@ -3,5 +3,5 @@ export enum ROUTES {
   LOGIN = 'login',
   SIGNUP = 'signup',
   RESET = 'reset',
-  NEW_PASSWORD = 'new-password'
+  NEW_PASSWORD = 'new-password',
 }

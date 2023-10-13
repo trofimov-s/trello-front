@@ -47,11 +47,7 @@ const SignupPage: FC = () => {
       ctaText="Sign Up"
       isCtaDisabled={isLoading}
     >
-      <Button
-        disabled={isLoading}
-        role="secondary"
-        onClick={() => navigateHanlder(ROUTES.LOGIN)}
-      >
+      <Button disabled={isLoading} role="secondary" onClick={() => navigateHanlder(ROUTES.LOGIN)}>
         Already a user? Sign In
       </Button>
     </Auth>

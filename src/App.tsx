@@ -14,7 +14,7 @@ export const App: FC = () => {
     if (LocalStorageHelper.getItem(LocalStorageKeys.Token)) {
       dispatch(AUTH_ACTIONS.forceAuthAsync());
     }
-  }, [dispatch])
+  }, [dispatch]);
 
   return (
     <>

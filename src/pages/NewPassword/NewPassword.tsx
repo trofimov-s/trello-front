@@ -19,7 +19,7 @@ const NewPassword: FC = () => {
   console.log('id', uid);
 
   const successRedirectFn = () => {
-    navigate('/' + ROUTES.LOGIN)
+    navigate('/' + ROUTES.LOGIN);
   };
 
   const submitHanlder = (value: any) => {
@@ -27,11 +27,13 @@ const NewPassword: FC = () => {
     const credentials: ConfirmPasswordPayloadI = {
       resetToken,
       userId: uid,
-      ...value
-    }
+      ...value,
+    };
 
-    dispatch(AUTH_ACTIONS.resetPasswordConfirmAsync({ navigateFn: successRedirectFn, credentials }))
-  }
+    dispatch(
+      AUTH_ACTIONS.resetPasswordConfirmAsync({ navigateFn: successRedirectFn, credentials }),
+    );
+  };
 
   return (
     <Auth

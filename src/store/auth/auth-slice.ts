@@ -27,7 +27,7 @@ const authSlice = createSlice({
     },
     forceAuthLoading(state, action: PayloadAction<boolean>) {
       state.isForceAuthLoading = action.payload;
-    }
+    },
   },
   extraReducers(builder) {
     builder.addCase(AUTH_ACTIONS.forceAuthAsync.fulfilled, (state, { payload }) => {

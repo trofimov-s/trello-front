@@ -30,8 +30,7 @@ class UserApiI extends BaseApi {
   }
 
   async logout(): Promise<StatusResponseI> {
-    const { data } = await this.axiosInstance
-      .get<StatusResponseI>(this.buildUrl((e) => e.logout));
+    const { data } = await this.axiosInstance.get<StatusResponseI>(this.buildUrl((e) => e.logout));
 
     return data;
   }
@@ -47,7 +46,7 @@ class UserApiI extends BaseApi {
   async resetPassword(credentials: ResetPasswordI): Promise<StatusResponseI> {
     const response = await this.axiosInstanceWithoutInterceptor.post<StatusResponseI>(
       this.buildUrl((e) => e.reset),
-      credentials
+      credentials,
     );
 
     return response.data;
@@ -56,15 +55,16 @@ class UserApiI extends BaseApi {
   async resetConfirmPassword(credentials: ConfirmPasswordPayloadI): Promise<StatusResponseI> {
     const response = await this.axiosInstanceWithoutInterceptor.patch<StatusResponseI>(
       this.buildUrl((e) => e.confirmPass),
-      credentials
+      credentials,
     );
 
     return response.data;
   }
 
-
-  async test(): Promise<{a: string}> {
-    return this.axiosInstance.get<{a: string}>(this.buildUrl((e) => e.test)).then(({ data }) => data);
+  async test(): Promise<{ a: string }> {
+    return this.axiosInstance
+      .get<{ a: string }>(this.buildUrl((e) => e.test))
+      .then(({ data }) => data);
   }
 }
 

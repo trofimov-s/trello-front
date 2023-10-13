@@ -7,5 +7,5 @@ export const endpoints: Endpoints = {
   refresh: 'refresh',
   test: 'test',
   reset: 'reset',
-  confirmPass: 'reset-confirm'
+  confirmPass: 'reset-confirm',
 };

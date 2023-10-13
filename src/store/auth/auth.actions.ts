@@ -95,7 +95,7 @@ const resetPasswordConfirmAsync = createAsyncThunk<
   { navigateFn: () => void; credentials: ConfirmPasswordPayloadI }
 >('auth/passwordConfirmAsync', async ({ navigateFn, credentials }, { dispatch }) => {
   dispatch(loading(true));
-  
+
   try {
     const response: StatusResponseI = await UserApi.resetConfirmPassword(credentials);
     console.log(response);
