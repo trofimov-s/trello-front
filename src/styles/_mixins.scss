@@ -17,3 +17,12 @@
     @content;
   }
 }
+
+@mixin overlayBase() {
+  @include colorsTransition() {
+    @apply rounded-lg;
+    @apply overflow-hidden;
+    @apply bg-slate-100 dark:bg-slate-600;
+    @apply shadow-md dark:shadow-slate-500;
+  }
+}

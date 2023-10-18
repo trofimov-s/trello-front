@@ -1,0 +1,15 @@
+@import 'styles/mixins';
+
+.overlay-host {
+  @apply px-5 py-3;
+  @apply cursor-default;
+  @apply opacity-0;
+
+  @include overlayBase;
+
+  @apply transition-opacity duration-200 ease-linear;
+
+  &.show {
+    @apply opacity-100;
+  }
+}

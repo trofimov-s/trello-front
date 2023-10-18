@@ -1,6 +1,7 @@
 import { FC, useEffect } from 'react';
-import './App.scss';
 import { Outlet } from 'react-router-dom';
+import './App.scss';
+
 import Header from '@components/Header/Header';
 import { useAppDispatch } from './store';
 import AUTH_ACTIONS from '@store/auth/auth.actions';

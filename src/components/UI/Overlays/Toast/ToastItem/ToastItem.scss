@@ -1,10 +1,9 @@
+@import 'styles/mixins';
+
 $delay: 500ms;
 
 .toast-item {
-  @apply rounded-lg;
-  @apply overflow-hidden;
-  @apply bg-slate-100 dark:bg-slate-600;
-  @apply shadow-md dark:shadow-slate-500;
+  @include overlayBase;
   animation: appearence $delay linear forwards;
 
   &--info {

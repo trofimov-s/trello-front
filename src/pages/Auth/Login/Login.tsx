@@ -16,10 +16,7 @@ const LoginPage: FC = () => {
   const { isLoading } = useAppSelector(AUTH_SELECTORS.selectAuthState);
 
   const navigateHanlder = (path: ROUTES) => navigate('/' + path);
-
-  const loginHandler = (values: any) => {
-    dispatch(AUTH_ACTIONS.loginAsync(values as LoginFormI));
-  };
+  const loginHandler = (values: any) => dispatch(AUTH_ACTIONS.loginAsync(values as LoginFormI));
 
   return (
     <>
